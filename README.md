@@ -61,8 +61,8 @@ A comprehensive financial ecosystem combining robust banking infrastructure with
 
 ## 📊 GitHub Stats
 
-![Rayen's GitHub stats](https://github-readme-stats.vercel.app/api?username=RedRayenDridi&show_icons=true&theme=radical)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=RedRayenDridi&layout=compact&theme=radical)
+![Rayen's GitHub stats](https://github-readme-stats.vercel.app/api?username=MedRayenDridi&show_icons=true&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MedRayenDridi&layout=compact&theme=radical)
 
 ---
 
