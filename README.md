@@ -70,7 +70,7 @@ A comprehensive financial ecosystem combining robust banking infrastructure with
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rayen-dridi/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:rayendridi.943@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/RedRayenDridi)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MedRayenDridi)
 
 ---
 
@@ -83,4 +83,4 @@ A comprehensive financial ecosystem combining robust banking infrastructure with
 
 ---
 
-⭐️ From [Rayen Dridi](https://github.com/RedRayenDridi)
+⭐️ From [Rayen Dridi](https://github.com/MedRayenDridi)
