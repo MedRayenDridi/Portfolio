@@ -1,0 +1,353 @@
+/* components/Header.css */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(249, 250, 251, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.dark-mode .header {
+    background: rgba(17, 24, 39, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.header.scrolled {
+    background: rgba(249, 250, 251, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transform: translateY(0);
+}
+
+.dark-mode .header.scrolled {
+    background: rgba(17, 24, 39, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--primary);
+    position: relative;
+    z-index: 1001;
+}
+
+.logo-text {
+    position: relative;
+    z-index: 2;
+}
+
+.logo-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-left: 4px;
+    position: relative;
+    top: -3px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    display: block;
+    overflow: hidden;
+}
+
+.dark-mode .nav-link {
+    color: var(--dark);
+}
+
+.nav-text {
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.nav-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.nav-link:hover .nav-text {
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.nav-link:hover .nav-underline {
+    width: 100%;
+}
+
+.nav-link.active .nav-underline {
+    width: 100%;
+}
+
+/* Header Actions */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light);
+    color: var(--dark);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark-mode .theme-toggle {
+    background: var(--darker);
+    color: var(--dark);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.theme-toggle-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.theme-toggle:hover .theme-toggle-inner {
+    transform: rotate(15deg);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background: var(--light);
+    color: var(--dark);
+    transition: all 0.3s ease;
+    z-index: 1001;
+}
+
+.dark-mode .mobile-menu-toggle {
+    background: var(--darker);
+    color: var(--dark);
+}
+
+.mobile-menu-toggle:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background: var(--lighter);
+    z-index: 1000;
+    transform: translateX(100%);
+    padding: 6rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .mobile-menu {
+    background: var(--darker);
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mobile-nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+}
+
+.mobile-nav-item {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.mobile-nav-link {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: block;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.dark-mode .mobile-nav-link {
+    color: var(--dark);
+}
+
+.mobile-nav-link:hover {
+    color: var(--primary);
+    transform: translateX(10px);
+}
+
+.mobile-menu-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .mobile-menu-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu-footer p {
+    margin-bottom: 1rem;
+    color: var(--gray);
+}
+
+.mobile-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.mobile-social-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.mobile-social-links a:hover {
+    color: var(--primary-dark);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .header-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .theme-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mobile-menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .mobile-menu {
+        width: 85%;
+    }
+}
