@@ -33,8 +33,8 @@ function App() {
     return (
         <div className="App">
             <Header darkMode={darkMode} setDarkMode={setDarkMode} />
-            <Hero />
-            <About />
+            <Hero darkMode={darkMode} />
+            <About darkMode={darkMode} />
             <Experience />
             <Projects />
             <Skills />
